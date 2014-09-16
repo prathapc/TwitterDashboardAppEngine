@@ -15,7 +15,8 @@
 
 </head>
 <h2>Direct messages sent and received by you </h2> <a href="/views/composeMsg.jsp" >Send new message</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	    <br />
+	    <br /><br />
+<h3> Conversation list </h3>
 	<%
 		Twitter twitter = (Twitter) request.getSession().getAttribute(
 				"twitter");
