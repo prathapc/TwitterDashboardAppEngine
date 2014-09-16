@@ -54,7 +54,7 @@ alert('in redirect jsp');
             
             request.getSession().setAttribute("twitter", twitter);
             %>
-		<%request.getRequestDispatcher("/callback").include(request,response);%>
+		<%request.getRequestDispatcher("/callback/").include(request,response);%>
 	}
 </script>
 </head>
