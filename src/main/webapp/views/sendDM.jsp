@@ -29,6 +29,6 @@
 			out.print("OOPS!! Please try again later");
 		%>
 		<br />
-		<a href="TwitterDashboard.jsp"> Back</a>
+		<a href="/views/composeMsg.jsp"> Back</a>
 </body>
 </html>

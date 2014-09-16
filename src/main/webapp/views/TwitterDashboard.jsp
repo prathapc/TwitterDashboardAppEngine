@@ -14,9 +14,9 @@
 <title>Twitter dashboard</title>
 
 </head>
-<body>
-	<h2>Direct messages sent and received by you  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	    <a href="loggedOut.jsp" > Logout</a></h2>
+<h2>Direct messages sent and received by you  
+	    </h2><a href="/views/composeMsg.jsp" >Send new message</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	    <a href="/views/loggedOut.jsp" > Logout</a><br />
 	<%
 		Twitter twitter = (Twitter) request.getSession().getAttribute(
 				"twitter");
@@ -66,49 +66,21 @@
 		for (Entry<String, TreeMap<Date, String>> entry : conversations
 				.entrySet()) {
 	%><b> <%
- 	out.println("Messages with:" + entry.getKey());
+ 	out.println("Conversation with: " + entry.getKey());
  %>
 	</b>
 	<%
 		
-	%><br />
+	%><br /><table>
 	<%
 		for (Entry<Date, String> messageThread : entry.getValue()
-					.entrySet()) {
-				out.println(messageThread.getValue() + "::"
-						+ messageThread.getKey());
-	%><br />
+					.entrySet()) { %><tr><td> <%
+				out.print(messageThread.getValue()); %></td><td> <% out.print(messageThread.getKey()); %></td></tr>
 	<%
 		}
-			out.println("-----------------------");
-	%><br />
+			
+	%></table><br />
 	<%
 		}
-	%>
-
-	<form name="composeForm" action="sendDM.jsp" method="post">
-		<table>
-			<tr>
-				<td colspan=2 align="center"><b>Compose Direct Message:</b></td>
-			</tr>
-			<tr>
-				<td colspan=2></td>
-			</tr>
-			<tr>
-				<td>To</td>
-				<td><input type="text" name="name" value=""></td>
-			</tr>
-			<tr>
-				<td>Message</td>
-				<td><textarea rows="6" name="msg"></textarea></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" name="Submit" value="Send"></td>
-			</tr>
-		</table>
-<br />
-		<a href="/views/loggedOut.jsp" > Logout</a>
-		</form>
-</body>
+	%></body>
 </html>

@@ -40,17 +40,7 @@ function closeWindow(){
 			avatarUrl = user.getProfileImageURL().toString();
 			System.out.println(user.getScreenName());
 			
-			ResponseList<DirectMessage> receivedMessages = twitter.getDirectMessages();
-            ResponseList<DirectMessage> sentMessages = twitter.getSentDirectMessages();
-            /* System.out.println("############Received messages##########");
-            for(DirectMessage recMessage : receivedMessages) {
-            	System.out.println(recMessage.getText()+"::"+recMessage.getSenderScreenName());
-            }
-            System.out.println("############Sent messages##########");
-            for(DirectMessage sentMessage : sentMessages) {
-            	System.out.println(sentMessage.getText()+"::"+sentMessage.getRecipientScreenName());
-            } */
-            
+			            
             request.getSession().setAttribute("twitter", twitter);
             %>
 		<%request.getRequestDispatcher("/callback/").include(request,response);%>
