@@ -15,7 +15,8 @@
 
 </head>
 <body>
-	<h2>Direct messages sent and received by you</h2>
+	<h2>Direct messages sent and received by you  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	    <a href="loggedOut.jsp" > Logout</a></h2>
 	<%
 		Twitter twitter = (Twitter) request.getSession().getAttribute(
 				"twitter");

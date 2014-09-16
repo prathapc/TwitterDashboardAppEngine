@@ -7,11 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<% request.getSession().setAttribute("twitter", null);
-			request.getSession().setAttribute("accessToken", null);
+	<% request.getSession().invalidate();
 			
 		%>
 	<h2>Successfully logged out!!</h2>
-	<a href="../index.jsp" > Signin again!</a>
+	<a href="../index.jsp" > Home</a>
 </body>
 </html>
