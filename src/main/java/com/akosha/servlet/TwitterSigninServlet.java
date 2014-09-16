@@ -28,6 +28,7 @@ public class TwitterSigninServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+PrintWriter out = response.getWriter();
 out.println ("<html><body><script>alert('inside sigin servlet');</script></body></html>");
 		try {
 			System.out.println("Inside servlet");
