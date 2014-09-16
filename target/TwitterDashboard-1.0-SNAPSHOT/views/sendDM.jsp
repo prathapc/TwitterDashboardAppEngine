@@ -24,7 +24,7 @@
 			e.printStackTrace();
 		}
 		if(message != null)
-			out.print("Your message sent successfully");
+			out.print("Your message sent successfully!! Now you can see recent message in the Dashboard!!");
 		else
 			out.print("OOPS!! Please try again later");
 		%>
