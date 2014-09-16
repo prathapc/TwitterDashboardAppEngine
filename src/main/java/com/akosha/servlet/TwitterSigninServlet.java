@@ -36,7 +36,7 @@ public class TwitterSigninServlet extends HttpServlet {
 			
 			//setting consumer key and consumer secret
 			twitter.setOAuthConsumer("4SkAK5YQAuajrJjyNdhp2uhku", "fs17RLRIJEP99Trv3PehzxsN0Yg1TyMu5Jg8xVoy0ptju14MZo");			
-			requestToken = twitter.getOAuthRequestToken("https://fresh-fusion-704.appspot.com/views/redirect.jsp");			
+			requestToken = twitter.getOAuthRequestToken("https://fresh-fusion-704.appspot.com/redirect.jsp");			
 			String authURL = requestToken.getAuthenticationURL();
 			System.out.println("authURL: "+authURL);
 			request.getSession().setAttribute("requestToken", requestToken);
