@@ -107,7 +107,7 @@
 			</tr>
 		</table>
 <br />
-		<a href="loggedOut.jsp" > Logout</a>
+		<a href="/loggedOut.jsp" > Logout</a>
 		</form>
 </body>
 </html>
