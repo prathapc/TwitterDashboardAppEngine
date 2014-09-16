@@ -11,13 +11,6 @@
 		<a href="javascript:twitter_login()"><img alt="twitter login"
 			src="images/sign-in-with-twitter-gray.png" /></a>
 
-<% if(request.getParameter("logout") != null) {
-				request.getSession().setAttribute("twitter",null);
-				request.getSession().setAttribute("accessToken",null);
-				
-				out.print("Successfully logged out");
-			}
-			%>
 	</tag:notloggedin>
 
 	<tag:loggedin>
