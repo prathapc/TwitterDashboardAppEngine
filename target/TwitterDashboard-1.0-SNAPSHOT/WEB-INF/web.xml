@@ -18,7 +18,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>TwitterSigninServlet</servlet-name>
-    <url-pattern>/signin</url-pattern>
+    <url-pattern>/signin/</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>TwitterCallbackServlet</servlet-name>
