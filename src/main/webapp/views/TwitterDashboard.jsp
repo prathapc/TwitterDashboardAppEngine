@@ -14,8 +14,7 @@
 <title>Twitter dashboard</title>
 
 </head>
-<h2>Direct messages sent and received by you  
-	    </h2><a href="/views/composeMsg.jsp" >Send new message</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<h2>Direct messages sent and received by you </h2> <a href="/views/composeMsg.jsp" >Send new message</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	    <a href="/views/loggedOut.jsp" > Logout</a><br />
 	<%
 		Twitter twitter = (Twitter) request.getSession().getAttribute(
