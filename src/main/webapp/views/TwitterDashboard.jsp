@@ -106,6 +106,8 @@
 				<td><input type="submit" name="Submit" value="Send"></td>
 			</tr>
 		</table>
+	<br />
+		<a href="./index.jsp?logout=logout" >Logout</a>
 	</form>
 </body>
 </html>

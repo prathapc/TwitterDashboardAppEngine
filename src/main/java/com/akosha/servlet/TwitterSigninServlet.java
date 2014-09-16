@@ -38,6 +38,7 @@ ConfigurationBuilder cb = new ConfigurationBuilder();
 		    
 	        Twitter twitter = new TwitterFactory(cb.build()).getInstance();
 	        
+twitter.setOAuthAccessToken(null);
 			RequestToken requestToken;
 			request.getSession().setAttribute("twitter", twitter);
 			
