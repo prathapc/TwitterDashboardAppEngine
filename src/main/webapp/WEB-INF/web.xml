@@ -18,11 +18,11 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>TwitterSigninServlet</servlet-name>
-    <url-pattern>/signin</url-pattern>
+    <url-pattern>/signin/</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>TwitterCallbackServlet</servlet-name>
-    <url-pattern>/callback</url-pattern>
+    <url-pattern>/callback/</url-pattern>
   </servlet-mapping>
 
 </web-app>
