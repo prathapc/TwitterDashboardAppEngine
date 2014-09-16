@@ -11,7 +11,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <script type="text/javascript">
 function closeWindow(){
-alert('in redirect jsp');
    <%!private long userId;
 	private String screenName;
 	private String name;
