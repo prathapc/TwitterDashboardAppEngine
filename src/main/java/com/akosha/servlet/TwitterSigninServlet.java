@@ -28,6 +28,7 @@ public class TwitterSigninServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+out.println ("<html><body><script>alert('inside sigin servlet');</script></body></html>");
 		try {
 			System.out.println("Inside servlet");
 			Twitter twitter = new TwitterFactory().getInstance();
@@ -40,6 +41,7 @@ public class TwitterSigninServlet extends HttpServlet {
 			String authURL = requestToken.getAuthenticationURL();
 			System.out.println("authURL: "+authURL);
 			request.getSession().setAttribute("requestToken", requestToken);
+out.println ("<html><body><script>alert('goint to sendredirect from signin!');</script></body></html>");
 			response.sendRedirect(authURL);
 			
 			//request.getRequestDispatcher("TwitterDashboard.jsp").forward(request, response);
