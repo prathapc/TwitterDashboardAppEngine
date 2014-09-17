@@ -7,6 +7,7 @@
 <title>Compose Twitter Direct message</title>
 </head>
 <body>
+<h1>This page not looks great right?? i am working on it, in next few minutes you can see a great page here..
 <h1>Send Direct message to any of your followers!!</h1>
 <h2>Please enter twitter id and message you want to send</h2>
 <form name="composeForm" action="sendDM.jsp" method="post">
