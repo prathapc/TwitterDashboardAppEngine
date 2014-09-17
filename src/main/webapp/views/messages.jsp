@@ -78,7 +78,7 @@
           <a class="brand" href="">
             Get started
           </a>
-<a class="brand" href="composeMsg.jsp">
+<a class="brand" href="../views/composeMsg.jsp">
             Send new message
           </a>
 
