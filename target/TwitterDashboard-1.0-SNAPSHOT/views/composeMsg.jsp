@@ -34,10 +34,9 @@
 <a class="brand" href="messages.jsp">
             Back to Dashbooard
           </a>
-<a class="brand" href="composeMsg.jsp">
-            Send new message
+<a class="brand" href="loggedOut.jsp">
+            Logout
           </a>
-
           <ul class="nav">
           </ul>
         </div>

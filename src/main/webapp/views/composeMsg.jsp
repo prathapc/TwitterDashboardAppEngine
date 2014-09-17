@@ -17,7 +17,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <style>
-    .container {
+    .container1 {
 	font-family: 'Verddana', Arial, Sans-serif
 }
     </style>
@@ -28,10 +28,7 @@
 <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="">
-            Get started
-          </a>
-<a class="brand" href="messages.jsp">
+          <a class="brand" href="messages.jsp">
             Back to Dashbooard
           </a>
 <a class="brand" href="loggedOut.jsp">
@@ -44,7 +41,7 @@
     </div>
 
 
-<div class="container">
+<div class="container1">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <form name="composeForm" action="sendDM.jsp" method="post">
