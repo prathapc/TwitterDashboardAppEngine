@@ -17,7 +17,7 @@
 
 	<tag:loggedin>
 		
-	<jsp:forward page="/views/TwitterDashboard.jsp"></jsp:forward>
+	<jsp:forward page="/views/messages.jsp"></jsp:forward>
 		
 	</tag:loggedin>
 
