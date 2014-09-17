@@ -14,6 +14,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Conversation messages</title>
+<link href="../assets/css/bootstrap.css" rel="stylesheet">
+<style>
+      body { padding-top: 60px; /* 60px to make the container go all the way
+      to the bottom of the topbar */ }
+    </style>
+<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <style>
+    </style>
+
 <%-- <script type="text/javascript">
 function closeWindow(){
 	<%Twitter twitterHandle = (Twitter) request.getSession().getAttribute(
@@ -101,7 +115,21 @@ function closeWindow(){
 
 </head>
 
-<body><a href="composeMsg.jsp" >Send new message</a><br/>
+<body>
+<div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="">
+            Get started
+          </a>
+          <ul class="nav">
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+<a href="composeMsg.jsp" >Send new message</a><br/>
 	<%
 Map<String, TreeMap<Date, String>> conversations = (Map<String, TreeMap<Date,String>>)request.getSession().getAttribute("conversations");
 	System.out.println("con size"+conversations.size());
