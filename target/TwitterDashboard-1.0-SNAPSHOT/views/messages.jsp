@@ -152,7 +152,7 @@
 	System.out.println("image:"+entry.getValue());
 	%>
 	<div id='container'>
-		<a href="conversation.jsp?name=<%= entry.getKey()%>&image=<%= entry.getValue() %>">
+		<a href="views/conversation.jsp?name=<%= entry.getKey()%>&image=<%= entry.getValue() %>">
 			<div class="stbody">
 				<div class="stimg">
 					<img src="<%= entry.getValue() %>"

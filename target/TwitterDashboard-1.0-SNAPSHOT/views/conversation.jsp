@@ -122,6 +122,9 @@ function closeWindow(){
           <a class="brand" href="">
             Get started
           </a>
+<a class="brand" href="messages.jsp">
+            Back to Dashbooard
+          </a>
 <a class="brand" href="composeMsg.jsp">
             Send new message
           </a>
