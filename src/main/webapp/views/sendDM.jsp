@@ -24,11 +24,14 @@
 			e.printStackTrace();
 		}
 		if(message != null)
-			out.print("Your message sent successfully!! Now you can see recent message in the Dashboard!!");
-		else
-			out.print("OOPS!! Please try again later");
+			response.sendRedirect("messages.jsp");
+		else {
+			out.println("alert('This message can not be sent. Please try again. ');");
+			response.sendRedirect("composeMsg.jsp");
+		}
+			
 		%>
 		<br />
-		<a href="/views/composeMsg.jsp"> Back</a>
+		<a href="messages.jsp"> Back to dashboard</a>
 </body>
 </html>
