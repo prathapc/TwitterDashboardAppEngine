@@ -81,7 +81,9 @@
 <a class="brand" href="../views/composeMsg.jsp">
             Send new message
           </a>
-
+<a class="brand" href="../views/loggedOut.jsp">
+            Logout
+          </a>
           <ul class="nav">
           </ul>
         </div>

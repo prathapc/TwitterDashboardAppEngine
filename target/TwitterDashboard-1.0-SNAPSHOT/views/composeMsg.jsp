@@ -5,15 +5,53 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Compose Twitter Direct message</title>
+<link href="../assets/css/bootstrap.css" rel="stylesheet">
+<style>
+      body { padding-top: 60px; /* 60px to make the container go all the way
+      to the bottom of the topbar */ }
+    </style>
+<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <style>
+    .container {
+	font-family: 'Verddana', Arial, Sans-serif
+}
+    </style>
+
 </head>
 <body>
-<h1>This page not looks great right?? i am working on it, in next few minutes you can see a great page here..
-<h1>Send Direct message to any of your followers!!</h1>
-<h2>Please enter twitter id and message you want to send</h2>
-<form name="composeForm" action="sendDM.jsp" method="post">
+
+<div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="">
+            Get started
+          </a>
+<a class="brand" href="messages.jsp">
+            Back to Dashbooard
+          </a>
+<a class="brand" href="composeMsg.jsp">
+            Send new message
+          </a>
+
+          <ul class="nav">
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form name="composeForm" action="sendDM.jsp" method="post">
 		<table>
 			<tr>
-				<td colspan=2 align="center"><b>Compose Direct Message:</b></td>
+				<td colspan=2 ><h3>Compose Direct Message<h3></h3></td>
 			</tr>
 			<tr>
 				<td colspan=2></td>
@@ -24,14 +62,30 @@
 			</tr>
 			<tr>
 				<td>Message</td>
-				<td><textarea rows="6" name="msg"></textarea></td>
+				<td><textarea class="input-xxlarge" name="msg"></textarea> </td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" name="Submit" value="Send"></td>
+				<td><button id="btn1" class="btn btn-success" type="submit">Send</button></td>
 			</tr>
 		</table>
-		<br /><a href="messages.jsp" >Go Back to Dashboard</a>
 		</form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="container">
+<footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+</div>
+
+<script src="jquery-1.8.3.js">
+    </script>
+    
+    <script src="assets/js/bootstrap.js">
+    </script>
+  
 </body>
 </html>

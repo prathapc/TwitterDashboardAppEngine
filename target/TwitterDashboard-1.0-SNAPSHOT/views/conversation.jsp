@@ -28,27 +28,16 @@
     <style>
     </style>
 
-<%-- <script type="text/javascript">
-function closeWindow(){
-	<%Twitter twitterHandle = (Twitter) request.getSession().getAttribute(
-	"twitter");
-	DirectMessage message = null; %>
-	 if (!txtarea1.value)
-     {
-         alert ("Please Enter message!");
-         return (false);
-     }
-		<% message = twitterHandle.sendDirectMessage(request.getParameter("name"), %>document.getElementById("txtarea1").value<%);
-		if(message != null) {
-			%>alert('Success'); <% }else {
-				%> alert('Failed'); <%}%>
-}</script> --%>
 <style>
 #container1 {
 	margin: 0 auto;
 	width: 600px;
 }
-
+#compose {
+	margin: 0 auto;
+	width: 600px;
+	float: right;
+}
 .stbody {
 	min-height: 35px;
 }
@@ -154,11 +143,11 @@ else
 		<div class="stbody">
 			<%if(imgUrl.equals(request.getParameter("image"))) {
 			%>
-			<div class="stimgleft">
+			<div class="stimgright">
 				<img src="<%= imgUrl %>" style='width: 50px; height: 50px' />
 			</div>
 			<% } else {
-		%><div class="stimgright">
+		%><div class="stimgleft">
 				<img src="<%= imgUrl %>" style='width: 50px; height: 50px' />
 			</div>
 			<%} %>
@@ -169,21 +158,15 @@ else
 		</div>
 	</div>
 	<%} %>
-	<%-- <div id='container1'>
-		<div class="stbody">
+	<form name="composeForm" action="sendDM.jsp" method="post">
+	<div id='container1'>
 			<div class="compose">
-				<table>
-					<tr>
-						<td><textarea id="txtarea1" name="name" rows="4"></textarea></td>
-						
-						<td><input id="btn1" type="button" value="send" onclick="/sendDM.jsp"/></td>
-						
-						<td><input type="hidden" name="to" value="<%= request.getParameter("name") %>"></input><td />
-					</tr>
-				</table>
+			<input type="hidden" name="name" value="<%= request.getParameter("name") %>"></input>
+					<textarea class="input-xxlarge" name="msg"></textarea> 
+						<button id="btn1" class="btn btn-success" type="submit">Send</button>
 			</div>
-		</div>
-	</div> --%>
+	</div>
+	</form>
 
 <div class="container">
 
