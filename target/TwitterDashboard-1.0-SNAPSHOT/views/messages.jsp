@@ -78,12 +78,16 @@
           <a class="brand" href="">
             Get started
           </a>
+<a class="brand" href="composeMsg.jsp">
+            Send new message
+          </a>
+
           <ul class="nav">
           </ul>
         </div>
       </div>
     </div>
-<p><a class="btn btn-default" href="composeMsg.jsp" role="button"> Send new message</a></p>
+
 
 	<%
 		Twitter twitter = (Twitter) request.getSession().getAttribute(
@@ -161,16 +165,17 @@
 			</div>
 		</a>
 
+	</div>
+	<% } %>
+
+<div id='container'>
+
+
 
 <footer>
         <p>&copy; Company 2014</p>
       </footer>
-
-
-	</div>
-	<% } %>
-
-
+</div>
 
     <script src="jquery-1.8.3.js">
     </script>

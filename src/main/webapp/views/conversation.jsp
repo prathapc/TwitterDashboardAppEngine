@@ -44,7 +44,7 @@ function closeWindow(){
 				%> alert('Failed'); <%}%>
 }</script> --%>
 <style>
-#container {
+#container1 {
 	margin: 0 auto;
 	width: 600px;
 }
@@ -122,14 +122,16 @@ function closeWindow(){
           <a class="brand" href="">
             Get started
           </a>
+<a class="brand" href="composeMsg.jsp">
+            Send new message
+          </a>
+
           <ul class="nav">
           </ul>
         </div>
       </div>
     </div>
 
-
-<p><a class="btn btn-default" href="composeMsg.jsp" role="button"> Send new message</a></p>
 	<%
 Map<String, TreeMap<Date, String>> conversations = (Map<String, TreeMap<Date,String>>)request.getSession().getAttribute("conversations");
 	System.out.println("con size"+conversations.size());
@@ -145,7 +147,7 @@ if(entry.getValue().toString().startsWith("SENT:"))
 else
 	imgUrl = request.getParameter("image");
 %>
-	<div id='container'>
+	<div id='container1'>
 		<div class="stbody">
 			<%if(imgUrl.equals(request.getParameter("image"))) {
 			%>
@@ -164,7 +166,7 @@ else
 		</div>
 	</div>
 	<%} %>
-	<%-- <div id='container'>
+	<%-- <div id='container1'>
 		<div class="stbody">
 			<div class="compose">
 				<table>
@@ -179,6 +181,7 @@ else
 			</div>
 		</div>
 	</div> --%>
+
 <div class="container">
 
 <footer>

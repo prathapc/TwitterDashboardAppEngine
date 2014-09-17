@@ -168,9 +168,9 @@
 	</div>
 	<% } %>
 
+
+
 <div id='container'>
-
-
 
 <footer>
         <p>&copy; Company 2014</p>
