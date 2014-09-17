@@ -30,7 +30,7 @@
 				<td><input type="submit" name="Submit" value="Send"></td>
 			</tr>
 		</table>
-		<br /><a href="TwitterDashboard.jsp" >Go Back to Dashboard</a>
+		<br /><a href="messages.jsp" >Go Back to Dashboard</a>
 		</form>
 </body>
 </html>
