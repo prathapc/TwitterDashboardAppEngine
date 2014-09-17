@@ -122,11 +122,11 @@ else
 			<%if(imgUrl.equals(request.getParameter("image"))) {
 			%>
 			<div class="stimgleft">
-				<img src="<%= imgUrl %>" style='width: 50px; height: 25px' />
+				<img src="<%= imgUrl %>" style='width: 50px; height: 50px' />
 			</div>
 			<% } else {
 		%><div class="stimgright">
-				<img src="<%= imgUrl %>" style='width: 50px; height: 25px' />
+				<img src="<%= imgUrl %>" style='width: 50px; height: 50px' />
 			</div>
 			<%} %>
 			<div class="sttext">

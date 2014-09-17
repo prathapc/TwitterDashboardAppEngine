@@ -37,10 +37,11 @@
             Welcome to Twitter Dashboard!!
           </h1>
           <p>
-            To get started, you need to login with your twitter account. Twitter dashboard is an app which faiclitates accessing of your twitter Direct messages at a glance in a webpage and you can send messages as well.
+            To get started, you need to login with your twitter account. Twitter dashboard is an app which faiclitates accessing your twitter Direct messages at a glance in a webpage and you can send messages as well.
           </p>
         </div>
-        <tag:notloggedin>
+<br />
+        <tag:notloggedin> 
 		<center><a href="javascript:twitter_login()"><img alt="twitter login"
 			src="images/sign-in-with-twitter-gray.png" /></a></center>
 
