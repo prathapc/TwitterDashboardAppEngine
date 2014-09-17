@@ -22,7 +22,7 @@
 <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="addGoal.html">
+          <a class="brand" href="">
             Get started
           </a>
           <ul class="nav">
