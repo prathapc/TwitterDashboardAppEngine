@@ -150,7 +150,7 @@
 		request.getSession().setAttribute("conversations", conversations);
 		
 	 TreeMap<Date,String> lastMsgdetail;
-	 
+	  %> <center><h2>All your Direct messages sent and recevied</h2></center><% 
 	for(Entry<String,String> entry : users.entrySet()) { 
 	lastMsgdetail = conversations.get(entry.getKey());
 	Entry<Date,String> lastEntry =lastMsgdetail.lastEntry();
@@ -172,13 +172,6 @@
 
 	</div>
 	<% } %>
-
-<div class="container">
-<footer>
-        <p>&copy; Akosha 2014</p>
-      </footer>
-</div>
-
 
     <script src="jquery-1.8.3.js">
     </script>

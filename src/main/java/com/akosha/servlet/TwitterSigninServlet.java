@@ -1,6 +1,7 @@
 package com.akosha.servlet;
 
 import java.io.IOException;
+import javax.servlet.http.Cookie;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +29,14 @@ public class TwitterSigninServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+Cookie[] delCookies = request.getCookies();
+			 try {
+			 for( Cookie cookie : delCookies) {
+			 cookie.setMaxAge(0);
+			 response.addCookie(cookie);
+			 }
+			 }catch(Exception e) {
+			}
 		try {
 			//System.out.println("Inside servlet");
 			//Twitter twitter = new TwitterFactory().getInstance();
