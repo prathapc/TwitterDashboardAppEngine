@@ -179,5 +179,8 @@ else
 			</div>
 		</div>
 	</div> --%>
+<footer>
+        <p>&copy; Company 2014</p>
+      </footer>
 </body>
 </html>

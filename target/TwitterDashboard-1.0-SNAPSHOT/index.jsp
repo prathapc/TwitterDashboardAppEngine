@@ -58,7 +58,9 @@
     </div>
 	
 
-
+<footer>
+        <p>&copy; Company 2014</p>
+      </footer>
     
     <script src="jquery-1.8.3.js">
     </script>

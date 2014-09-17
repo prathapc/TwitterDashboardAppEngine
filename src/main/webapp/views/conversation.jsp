@@ -129,7 +129,7 @@ function closeWindow(){
     </div>
 
 
-<a href="composeMsg.jsp" >Send new message</a><br/>
+<p><a class="btn btn-default" href="composeMsg.jsp" role="button"> Send new message</a></p>
 	<%
 Map<String, TreeMap<Date, String>> conversations = (Map<String, TreeMap<Date,String>>)request.getSession().getAttribute("conversations");
 	System.out.println("con size"+conversations.size());

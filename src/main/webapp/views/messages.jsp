@@ -83,8 +83,8 @@
         </div>
       </div>
     </div>
+<p><a class="btn btn-default" href="composeMsg.jsp" role="button"> Send new message</a></p>
 
-<a href="composeMsg.jsp" >Send new message</a><br />
 	<%
 		Twitter twitter = (Twitter) request.getSession().getAttribute(
 				"twitter");
