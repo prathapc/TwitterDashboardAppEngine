@@ -160,8 +160,16 @@
 				</div>
 			</div>
 		</a>
+
+
+<footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+
+
 	</div>
 	<% } %>
+
 
 
     <script src="jquery-1.8.3.js">
