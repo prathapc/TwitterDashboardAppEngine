@@ -61,6 +61,12 @@
 	display: block;
 	font-family: 'Georgia', Times New Roman, Times, serif
 }
+.stmsg {
+	font-size: 11px;
+	color: #999;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 5px;
+}
 
 .sttime {
 	font-size: 11px;
@@ -159,7 +165,7 @@
 				</div>
 				<div class="sttext">
 					<%= entry.getKey() %>
-					<div class="sttime"><%= lastEntry.getValue() %><%= "      "%><%= lastEntry.getKey() %></div>
+					<div class="stmsg"><%= lastEntry.getValue() %><%= "      "%></div><div class="sttime"><%= lastEntry.getKey() %></div>
 				</div>
 			</div>
 		</a>
@@ -167,14 +173,12 @@
 	</div>
 	<% } %>
 
-
-
-<div id='container'>
-
+<div class="container">
 <footer>
-        <p>&copy; Company 2014</p>
+        <p>&copy; Akosha 2014</p>
       </footer>
 </div>
+
 
     <script src="jquery-1.8.3.js">
     </script>

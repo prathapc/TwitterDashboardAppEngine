@@ -108,10 +108,7 @@
 <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="">
-            Get started
-          </a>
-<a class="brand" href="messages.jsp">
+          <a class="brand" href="messages.jsp">
             Back to Dashbooard
           </a>
 <a class="brand" href="composeMsg.jsp">

@@ -29,7 +29,7 @@
 <script type="text/javascript" src="js/twitterLogin.js"></script>
 
 <style>
-#container {
+#container1 {
 	margin: 0 auto;
 	width: 600px;
 }
@@ -75,10 +75,7 @@
 <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="">
-            Get started
-          </a>
-<a class="brand" href="../views/composeMsg.jsp">
+          <a class="brand" href="../views/composeMsg.jsp">
             Send new message
           </a>
 <a class="brand" href="../views/loggedOut.jsp">
@@ -153,7 +150,7 @@
 	Entry<Date,String> lastEntry =lastMsgdetail.lastEntry();
 	System.out.println("image:"+entry.getValue());
 	%>
-	<div id='container'>
+	<div id='container1'>
 		<a href="../views/conversation.jsp?name=<%= entry.getKey()%>&image=<%= entry.getValue() %>">
 			<div class="stbody">
 				<div class="stimg">
@@ -162,7 +159,7 @@
 				</div>
 				<div class="sttext">
 					<%= entry.getKey() %>
-					<div class="sttime"><%= lastEntry.getValue() %></div>
+					<div class="sttime"><%= lastEntry.getValue() %><%= "      "%><%= lastEntry.getKey() %></div>
 				</div>
 			</div>
 		</a>
