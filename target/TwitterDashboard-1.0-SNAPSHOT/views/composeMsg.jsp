@@ -69,6 +69,7 @@ Twitter twitter = (Twitter) request.getSession().getAttribute(
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <form name="composeForm" action="sendDM.jsp" method="post">
+<br /><br /><br />
 		<table>
 			<tr>
 				<td colspan=2 ><h3>Compose Direct Message<h3></h3></td>
