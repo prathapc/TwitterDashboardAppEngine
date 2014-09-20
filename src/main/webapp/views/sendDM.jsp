@@ -29,7 +29,7 @@
 			System.out.println("added:"+arr[i]);
 			i++;
 		}
-		String notSentTo = "";
+		String notSentTo = null;
 		for(String recipient : arr) {
 			System.out.println("going to send to:"+recipient);
 			try {
@@ -37,6 +37,7 @@
 					message = twitter.sendDirectMessage(recipient,text);	
 			}catch(TwitterException te) {
 				System.out.println("OOPS!!"+recipient);
+notSentTo += " ";
 				notSentTo += recipient+" ";
 			}
 			/* if(message == null)
