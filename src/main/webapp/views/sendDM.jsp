@@ -29,7 +29,7 @@
 			System.out.println("added:"+arr[i]);
 			i++;
 		}
-		String notSentTo = null;
+		String notSentTo = "";
 		for(String recipient : arr) {
 			System.out.println("going to send to:"+recipient);
 			try {

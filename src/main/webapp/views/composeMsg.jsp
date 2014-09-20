@@ -130,7 +130,7 @@ return false;
 				<td></td><td></td>
 				<td><button id="btn1" class="btn btn-success" type="submit">Send</button></td>
 				<% if((String)request.getParameter("notSentTo") != null)  {
-				%><font color="red">Not able to send this message to '<%= request.getParameter("notSentTo") %> ' this time!!</font> <%
+				%><tr><font color="red">Not able to send this message to '<%= request.getParameter("notSentTo") %> ' this time!!</font></tr> <%
 				
 				} %>
 				

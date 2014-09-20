@@ -26,7 +26,7 @@
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <style>
     </style>
-<script type="text/javascript" src="js/twitterLogin.js"></script>
+<script type="text/javascript" src="../js/twitterLogin.js"></script>
 
 <style>
 #container1 {
@@ -172,13 +172,6 @@
 
 	</div>
 	<% } %>
-
-    <script src="jquery-1.8.3.js">
-    </script>
-    
-    <script src="assets/js/bootstrap.js">
-    </script>
-  
 
 </body>
 </html>
