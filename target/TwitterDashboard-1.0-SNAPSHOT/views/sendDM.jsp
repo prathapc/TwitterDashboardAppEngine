@@ -16,20 +16,13 @@
 		DirectMessage message = null;
 		String to = request.getParameter("name");
 		String text = request.getParameter("msg");
-String arr[] = to.split("@");
-		for(String s : arr)
-			to = s;
-		try {
-			if(to != "" && text != "")
-				message = twitter.sendDirectMessage(to,text);
-		} catch (TwitterException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+				if(to != "" && text != "")
+					message = twitter.sendDirectMessage(to,text);
 		if(message != null)
 			response.sendRedirect("messages.jsp");
 		else {
-			out.println("alert('This message can not be sent. Please try again. ');");
+			out.println("<html><head></head><body><script>alert('This message can not be sent. Please try again. ');</script></body</html>");
 			response.sendRedirect("composeMsg.jsp");
 		}
 			

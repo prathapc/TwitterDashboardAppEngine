@@ -16,7 +16,9 @@
 		DirectMessage message = null;
 		String to = request.getParameter("name");
 		String text = request.getParameter("msg");
-		
+		String arr[] = to.split("@");
+		for(String s : arr)
+			to = s;
 				if(to != "" && text != "")
 					message = twitter.sendDirectMessage(to,text);
 		if(message != null)

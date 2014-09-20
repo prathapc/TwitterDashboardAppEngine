@@ -74,7 +74,7 @@ Twitter twitter = (Twitter) request.getSession().getAttribute(
 			<tr>
 				<td colspan=2 ><h3>Compose Direct Message<h3></h3></td>
 			</tr>
-<tr><td><p>Now we can send DM to multiple recipients with ; seperation</td></tr><tr></tr><tr></tr>
+<tr></tr><tr></tr>
 			<tr>
 				<td colspan=2></td>
 			</tr>
