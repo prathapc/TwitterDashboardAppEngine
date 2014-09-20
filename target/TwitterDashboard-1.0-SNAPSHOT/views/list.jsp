@@ -23,19 +23,7 @@
 			}
 		
 				String query = (String)request.getParameter("q");
-				System.out.println("query:"+query);
-				String dupquery = query;
-				int endIndex;
-				if(query.contains(";")) {
-					endIndex = query.lastIndexOf(";");
-					System.out.println("endIndex:"+endIndex);
-					if(endIndex < dupquery.length()-1 && query.substring(endIndex+1) != " ") {
-						query = "";
-						//if(query.substring(endIndex+1) != " ")
-						query = dupquery.substring(endIndex+1,dupquery.length()).trim();						
-					}
-				}
-				System.out.println("query after:"+query);
+				
 				int cnt=1;
 				for(int j=0;j<str.length;j++)
 				{
