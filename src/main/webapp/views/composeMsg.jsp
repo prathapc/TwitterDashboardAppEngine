@@ -70,11 +70,11 @@ Twitter twitter = (Twitter) request.getSession().getAttribute(
         <div class="col-md-6 col-md-offset-3">
             <form name="composeForm" action="sendDM.jsp" method="post">
 <br /><br /><br />
-		<table>
+		<table cellspacing="10">
 			<tr>
 				<td colspan=2 ><h3>Compose Direct Message<h3></h3></td>
 			</tr>
-<tr><td><p>Now we can send DM to multiple recipients with ; seperation</td></tr>
+<tr><td><p>Now we can send DM to multiple recipients with ; seperation</td></tr><tr></tr><tr></tr>
 			<tr>
 				<td colspan=2></td>
 			</tr>
