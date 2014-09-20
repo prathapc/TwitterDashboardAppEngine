@@ -1,30 +1,52 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@page import="twitter4j.Twitter"%>
+<%@page import="twitter4j.IDs"%>
+<%@page import="twitter4j.TwitterException"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="twitter4j.ResponseList"%>
+<%@page import="twitter4j.User"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Compose Twitter Direct message</title>
 <link href="../assets/css/bootstrap.css" rel="stylesheet">
-<style>
-      body { padding-top: 60px; /* 60px to make the container go all the way
-      to the bottom of the topbar */ }
-    </style>
+<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+<script src="../js/jquery.autocomplete.js"></script>	
+<script>
+	jQuery(function(){
+		$("#name").autocomplete("list.jsp");
+	});
+   </script>
 <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
-<link rel="shortcut icon" href="../assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-    <style>
-    .container {
-	font-family: 'Verddana', Arial, Sans-serif
-}
-    </style>
-
+<link rel="stylesheet" type="text/css" href="../css/autocomplete.css" />
 </head>
 <body>
-
+<%
+if(request.getSession().getAttribute("followers") == null) {
+Twitter twitter = (Twitter) request.getSession().getAttribute(
+			"twitter");
+	long lCursor = -1;
+	IDs followingIDs = null;
+	IDs followersIDs = null;
+	int count=0;
+	List<String> followers = new ArrayList<String>();
+	try {
+		String userID = twitter.getScreenName();
+		long[] followerID = twitter.getFollowersIDs(userID, -1).getIDs();  //get ids of users who are following him
+		ResponseList<User> userName = twitter.lookupUsers(followerID);
+		for (User u : userName) {
+			followers.add(u.getName()+" @"+u.getScreenName());
+			System.out.println(u.getName()+" @"+u.getScreenName());
+		}
+	} catch (TwitterException e) {
+		e.printStackTrace();
+	}
+	request.getSession().setAttribute("followers",followers);
+}
+	 %>
 <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
@@ -56,7 +78,7 @@
 			</tr>
 			<tr>
 				<td>To</td>
-				<td><input type="text" width="100" name="name" value=""></td>
+				<td <input type="text" id="name" name="name" autocomplete="off" spellcheck="false"></td>
 			</tr>
 			<tr>
 				<td>Message</td>

@@ -56,13 +56,14 @@
       <div>
       </div>
     </div>
+
 <div class="container">
-	
 
 <footer>
-        <p>&copy; Company 2014</p>
+        <p>&copy; Akosha 2014</p>
       </footer>
-    </div>
+</div>
+
     <script src="jquery-1.8.3.js">
     </script>
     
