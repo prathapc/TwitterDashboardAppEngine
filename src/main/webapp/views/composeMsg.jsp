@@ -79,11 +79,11 @@ Twitter twitter = (Twitter) request.getSession().getAttribute(
 				<td colspan=2></td>
 			</tr>
 			<tr>
-				<td>To</td>
+				<td align="right">To</td>
 				<td> <input type="text" id="name" name="name" autocomplete="off" spellcheck="false"></td>
 			</tr>
 			<tr>
-				<td>Message</td>
+				<td align="right">Message</td>
 				<td><textarea class="input-xxlarge" name="msg"></textarea> </td>
 			</tr>
 			<tr>
