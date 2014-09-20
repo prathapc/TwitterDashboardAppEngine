@@ -16,9 +16,9 @@
 <title>Compose Twitter Direct message</title>
 <link href="../assets/css/bootstrap.css" rel="stylesheet">
 <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
 <script>
 $(function() {
 
@@ -119,7 +119,7 @@ return false;
 			<tr>
 				<td align="right">To</td><td></td>
 				<td> 
-<input id="name" class="input-xxlarge" name="name" size="100">
+<input id="name" class="input-xxlarge" name="name"  autocomplete="off" spellcheck="false" size="100">
 			</td>
 			</tr>
 			<tr>
