@@ -11,21 +11,41 @@
 </head>
 <body>
 
-<% Twitter twitter = (Twitter) request.getSession().getAttribute(
-				"twitter");
+<% Twitter twitter = (Twitter) request.getSession().getAttribute("twitter");
 		DirectMessage message = null;
 		String to = request.getParameter("name");
+		System.out.println("To:"+to);
 		String text = request.getParameter("msg");
-		String arr[] = to.split("@");
-		for(String s : arr)
-			to = s;
-				if(to != "" && text != "")
-					message = twitter.sendDirectMessage(to,text);
-		if(message != null)
+		System.out.println("To:"+to+"::Message:"+text);
+		String recList[] = to.split(",");
+		System.out.println("splited by double space:"+recList.toString());
+		String[] arr = new String[recList.length];
+		int i=0;
+		for(String s : recList) {
+			String[] namePairs = s.split("@");
+			System.out.println("splited by @:"+namePairs.toString());
+			for(String s1 : namePairs)
+				arr[i] = s1.trim();
+			System.out.println("added:"+arr[i]);
+			i++;
+		}
+		String notSentTo = null;
+		for(String recipient : arr) {
+			System.out.println("going to send to:"+recipient);
+			try {
+				if(recipient != null && recipient != " " && recipient != "" && text != "")
+					message = twitter.sendDirectMessage(recipient,text);	
+			}catch(TwitterException te) {
+				System.out.println("OOPS!!"+recipient);
+				notSentTo += recipient+" ";
+			}
+			/* if(message == null)
+				notSentTo += recipient+" "; */
+		}
+				if(notSentTo == null)
 			response.sendRedirect("messages.jsp");
 		else {
-			out.println("<html><head></head><body><script>alert('This message can not be sent. Please try again. ');</script></body</html>");
-			response.sendRedirect("composeMsg.jsp");
+			response.sendRedirect("composeMsg.jsp?notSentTo="+notSentTo);
 		}
 			
 		%>
