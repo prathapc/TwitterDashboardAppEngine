@@ -79,7 +79,7 @@ Twitter twitter = (Twitter) request.getSession().getAttribute(
 			</tr>
 			<tr>
 				<td>To</td>
-				<td <input type="text" id="name" name="name" autocomplete="off" spellcheck="false"></td>
+				<td> <input type="text" id="name" name="name" autocomplete="off" spellcheck="false"></td>
 			</tr>
 			<tr>
 				<td>Message</td>
@@ -102,8 +102,6 @@ Twitter twitter = (Twitter) request.getSession().getAttribute(
       </footer>
 </div>
 
-    <script src="../assets/js/bootstrap.js">
-    </script>
-  
+    
 </body>
 </html>
