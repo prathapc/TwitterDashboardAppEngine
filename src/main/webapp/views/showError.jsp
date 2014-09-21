@@ -15,9 +15,6 @@
       <div class="navbar-inner">
         <div class="container">
           
-<a class="brand" href="loggedOut.jsp">
-           Home
-          </a>
           <ul class="nav">
           </ul>
         </div>
@@ -30,7 +27,7 @@
           <h1>
             We regret for the inconvience caused. 
           </h1>
-         <h2>Please try again later after clearing cookies (CTRL+SHIFT+DEL)</h2>
+         <h2>It seems you already loggin but not authorized app. Please try again later after clearing cookies (CTRL+SHIFT+DEL)</h2>
         </div>
        
       </div>
