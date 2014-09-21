@@ -1,6 +1,7 @@
 <%@page import="com.akosha.servlet.ListToJavaScriptVar"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page errorPage="showError.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@page import="twitter4j.Twitter"%>
 <%@page import="twitter4j.IDs"%>
@@ -142,12 +143,13 @@ return false;
     </div>
 </div>
 
-<div class="container">
+<div class="navbar navbar-default navbar-fixed-bottom">
+	 <div class="container">
 <footer>
         <p>&copy; Akosha 2014</p>
       </footer>
 </div>
-
+	 </div>
     
 </body>
 </html>

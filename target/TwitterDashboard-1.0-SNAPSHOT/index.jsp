@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <%@taglib prefix="tag" tagdir="/WEB-INF/tags"%>
+<%@ page errorPage="/views/ShowError.jsp" %>
 <html>
 <head>
 <title>Akosha-Twitter DM dashboard</title>
@@ -57,19 +58,13 @@
       </div>
     </div>
 
-<div class="container">
-
+<div class="navbar navbar-default navbar-fixed-bottom">
+	 <div class="container">
 <footer>
         <p>&copy; Akosha 2014</p>
       </footer>
 </div>
-
-    <script src="jquery-1.8.3.js">
-    </script>
-    
-    <script src="assets/js/bootstrap.js">
-    </script>
-  
+	 </div>  
 
 </body>
 </html>

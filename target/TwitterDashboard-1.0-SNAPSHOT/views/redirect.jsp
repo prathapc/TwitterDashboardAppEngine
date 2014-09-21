@@ -1,3 +1,4 @@
+<%@ page errorPage="showError.jsp" %>
 <%@page import="twitter4j.TwitterException"%>
 <%@page import="twitter4j.User"%>
 <%@page import="twitter4j.TwitterFactory"%>

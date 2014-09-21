@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"
 	import="twitter4j.Twitter, twitter4j.ResponseList, twitter4j.DirectMessage"%>
+<%@ page errorPage="showError.jsp" %>
 <%@page import="java.util.Set"%>
 <%@page import="java.util.HashSet"%>
 <%@page import="java.util.TreeMap"%>
@@ -160,19 +161,21 @@ else
 	<form name="composeForm" action="sendDM.jsp" method="post">
 	<div id='container1'>
 			<div class="compose">
-			<input type="hidden" name="name" value="<%= request.getParameter("name") %>"></input>
-					<textarea class="input-xxlarge" name="msg"></textarea> 
+			<textarea class="input-xxlarge" name="msg"></textarea> 
 						<button id="btn1" class="btn btn-success" type="submit">Send</button>
+<div id="threadMsg">
+				<input type="hidden" name="name" value="<%= request.getParameter("name") %>"></input>
+				</div>
 			</div>
 	</div>
 	</form>
 
-<div class="container">
-
+<div class="navbar navbar-default navbar-fixed-bottom">
+	 <div class="container">
 <footer>
         <p>&copy; Akosha 2014</p>
       </footer>
 </div>
-  
+	 </div>  
 </body>
 </html>

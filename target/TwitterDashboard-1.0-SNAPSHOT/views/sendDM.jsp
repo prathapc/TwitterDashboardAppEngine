@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page errorPage="showError.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@page import="twitter4j.TwitterException"%>
 <%@page import="twitter4j.Twitter"%>
@@ -29,7 +30,7 @@
 			System.out.println("added:"+arr[i]);
 			i++;
 		}
-		String notSentTo = "";
+		String notSentTo = null;
 		for(String recipient : arr) {
 			System.out.println("going to send to:"+recipient);
 			try {
@@ -37,7 +38,11 @@
 					message = twitter.sendDirectMessage(recipient,text);	
 			}catch(TwitterException te) {
 				System.out.println("OOPS!!"+recipient);
-				notSentTo += recipient+" ";
+if(notSentTo == null)
+	notSentTo = "";
+else
+notSentTo += ", ";
+				notSentTo += recipient;
 			}
 			/* if(message == null)
 				notSentTo += recipient+" "; */

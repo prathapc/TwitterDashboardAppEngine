@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"
 	import="twitter4j.Twitter, twitter4j.ResponseList, twitter4j.DirectMessage"%>
+<%@ page errorPage="showError.jsp" %>
 <%@page import="java.util.Set"%>
 <%@page import="java.util.HashSet"%>
 <%@page import="java.util.TreeMap"%>
@@ -157,7 +158,7 @@
 	System.out.println("image:"+entry.getValue());
 	%>
 	<div id='container1'>
-		<a href="../views/conversation.jsp?name=<%= entry.getKey()%>&image=<%= entry.getValue() %>">
+		<a href="../views/conversation.jsp?name=<%= entry.getKey()%>&image=<%= entry.getValue() %>#threadMsg">
 			<div class="stbody">
 				<div class="stimg">
 					<img src="<%= entry.getValue() %>"
@@ -172,6 +173,14 @@
 
 	</div>
 	<% } %>
+
+<div class="navbar navbar-default navbar-fixed-bottom">
+	 <div class="container">
+<footer>
+        <p>&copy; Akosha 2014</p>
+      </footer>
+</div>
+	 </div>
 
 </body>
 </html>
