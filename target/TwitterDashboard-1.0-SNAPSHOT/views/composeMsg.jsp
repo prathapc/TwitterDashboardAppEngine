@@ -87,6 +87,16 @@ return false;
 });
 });
 </script>
+<script>
+$(document).ready(function(){
+    $('#btn1').prop('disabled',true);
+    $('#msg').keyup(function(){
+    	if($("#name").val().length > 0)
+    		$('#btn1').prop('disabled', $.trim(this.value) === "" ? true : false);  
+    })
+    
+}); 
+    </script>
 </head>
 <body>
 <div class="navbar navbar-fixed-top navbar-inverse">
@@ -125,7 +135,7 @@ return false;
 			</tr>
 			<tr>
 				<td align="right">Message</td><td></td>
-				<td><textarea class="input-xxlarge" name="msg"></textarea> </td>
+				<td><textarea class="input-xxlarge" name="msg" id="msg"></textarea> </td>
 			</tr>
 			<tr>
 				<td></td><td></td>

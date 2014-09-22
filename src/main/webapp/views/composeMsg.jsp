@@ -91,7 +91,7 @@ return false;
 $(document).ready(function(){
     $('#btn1').prop('disabled',true);
     $('#msg').keyup(function(){
-    	if($("#name").val().length > 0)
+    	if($("#name").val().trim().length > 0)
     		$('#btn1').prop('disabled', $.trim(this.value) === "" ? true : false);  
     })
     

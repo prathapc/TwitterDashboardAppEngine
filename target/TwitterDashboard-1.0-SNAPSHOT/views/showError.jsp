@@ -25,9 +25,9 @@
       <div class="hero-unit">
         <div>
           <h1>
-            We regret for the inconvience caused. 
+            We regret for the inconvenience caused. 
           </h1>
-         <h2>It seems you already loggin but not authorized app. Please try again later after clearing cookies (CTRL+SHIFT+DEL)</h2>
+         <h2>It seems you already logged but not authorized app. Please try again after clearing cookies (CTRL+SHIFT+DEL)</h2>
         </div>
        
       </div>
