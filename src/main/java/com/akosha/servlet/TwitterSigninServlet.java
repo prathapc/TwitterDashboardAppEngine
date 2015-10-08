@@ -42,8 +42,8 @@ Cookie[] delCookies = request.getCookies();
 			//Twitter twitter = new TwitterFactory().getInstance();
 ConfigurationBuilder cb = new ConfigurationBuilder();
 		    cb.setDebugEnabled(true)
-		          .setOAuthConsumerKey("4SkAK5YQAuajrJjyNdhp2uhku")
-		          .setOAuthConsumerSecret("fs17RLRIJEP99Trv3PehzxsN0Yg1TyMu5Jg8xVoy0ptju14MZo");
+		          .setOAuthConsumerKey("nJO97mMSo6flPqnmgB41S3EmG")
+		          .setOAuthConsumerSecret("H1QTtwsiA4oM2zelHUFpT39C99vZ3EAW4zE4cngHL2gw2yz0Ew");
 		    
 	        Twitter twitter = new TwitterFactory(cb.build()).getInstance();
 	        
